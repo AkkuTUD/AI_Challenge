@@ -60,7 +60,7 @@ def train_model(df, df_2021):
     model.fit(X_train, y_train)
 
     save_dir = os.getcwd()
-    file_path = os.path.join(save_dir, 'flask_app/model.pkl')
+    file_path = os.path.join(save_dir, 'model.pkl')
     
 
     joblib.dump(model, file_path)

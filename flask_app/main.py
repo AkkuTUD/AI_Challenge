@@ -13,15 +13,17 @@ app = Flask(__name__)
 
 #Output: { "prediction": 20.08856773376465 }
 
-save_dir = os.getcwd()
-model_path = os.path.join(save_dir, 'flask_app/model.pkl')
+current_dir = os.getcwd()
+
+model_path = os.path.join(current_dir, 'model.pkl')
 with open(model_path, 'rb') as f:
      model = pickle.load(f)
 
-dataset_preprocessed = os.path.join(save_dir, 'datasets/model_prediction_df.csv')
+dataset_preprocessed = os.path.join(current_dir, 'datasets/model_prediction_df.csv')
 df = pd.read_csv(dataset_preprocessed)
+print(dataset_preprocessed)
 
-dataset_preprocessed_2021 = os.path.join(save_dir, 'datasets/df_2021.csv')
+dataset_preprocessed_2021 = os.path.join(current_dir, 'datasets/df_2021.csv')
 df_2021 = pd.read_csv(dataset_preprocessed_2021)
 
 @app.route('/')

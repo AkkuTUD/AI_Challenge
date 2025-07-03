@@ -1,7 +1,7 @@
 Flask==3.1.1
 joblib==1.5.1
-matplotlib>=3.10.3
-numpy>=1.25.2
+matplotlib==3.10.3
+numpy==1.25.2
 pandas==2.3.0
 scikit_learn==1.7.0
 uvicorn==0.35.0
